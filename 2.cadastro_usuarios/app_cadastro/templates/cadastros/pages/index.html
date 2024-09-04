@@ -1,0 +1,32 @@
+{% extends "cadastros/pages/base.html" %} 
+{% block conteudo %}
+
+<h1>Cadastro de usuários</h1>
+    <div class="container">
+        <form action="{% url 'listagem_usuarios' %}" method="post">
+            {% csrf_token %}
+            <div class="container-form">
+                <div class="container-form">
+                <label for="validationDefault01" class="form-label">Nome</label>
+                <input type="text" class="form-control" name="nome" id="validationDefault01" required>
+                </div>
+                <div  class="container-form">
+                <label for="validationDefault02" class="form-label">Idade</label>
+                <input type="text" class="form-control" name="idade" id="validationDefault02" required>
+                </div>
+                <div  class="container-form">
+                <button class="btn btn-primary form-control" type="submit">Cadastrar</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+{% endblock  %}
+
+
+
+ 
+

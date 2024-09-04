@@ -1,0 +1,30 @@
+{% extends "cadastros/pages/base.html" %}
+{% block  conteudo%}
+
+
+<div class="container">
+    <h1>Listagem de usuarios</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOME</th>
+            <th scope="col">IDADE</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for user in todos_os_usuarios%}
+          <tr>
+            <th scope="row">{{user.id_usuario}}</th>
+            <td>{{user.nome}}</td>
+            <td>{{user.idade}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+
+
+{% endblock  %}
+
